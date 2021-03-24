@@ -94,3 +94,26 @@
         height: 22px;
     }
 }
+
+@media screen and (max-width: 500px) {
+    body {
+        display: block;
+    }
+
+    main #dashboard > .course-info {
+        flex-direction: column;
+    }
+
+    main #dashboard > .upcoming {
+        flex-direction: column;
+        /* padding-bottom: 40px; */
+    }
+
+    main #dashboard > .upcoming > * {
+        margin: 20px 0px;
+    }
+
+    main #dashboard > .upcoming > *:not(:last-child) {
+        margin-right: 0px;
+    }
+}
