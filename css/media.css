@@ -1,5 +1,5 @@
 @media screen and (min-width: 1181px) {
-    aside#menu #menu-btn {
+    aside#menu button.for-mobile {
         display: none;
     }
 
@@ -26,6 +26,7 @@
         width: 45px;
         height: 45px;
         font-size: 20px;
+        margin-right: auto;
     }
 
     aside#menu ul {
@@ -38,30 +39,37 @@
         padding: 10px;
     }
 
-    aside#menu #menu-btn {
+    aside#menu button.for-mobile {
         border: none;
         outline: none;
         cursor: pointer;
         background-color: transparent;
+        padding: 10px 20px;
     }
 
-    aside#menu #menu-btn svg {
-        width: 22px;
-        height: 22px;
+    aside#menu button.for-mobile svg {
+        width: 25px;
+        height: 25px;
     }
 
     main {
         grid-row: 2 / 3;
     }
 
+    main #dashboard {
+        padding: 100px 5% 50px;
+    }
+
     #profile-info {
         height: 100%;
-        width: 320px;
+        width: 420px;
         position: fixed;
+        overflow-y: scroll;
         top: 0;
         transition: .8s;
         backdrop-filter: blur(5px);
         background-color: #fafafabe;
+        z-index: 6;
     }
     
     #profile-info.open {
@@ -95,9 +103,43 @@
     }
 }
 
+@media screen and (min-width: 501px) {
+    #menu-btn {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 500px) {
     body {
         display: block;
+    }
+
+    aside#menu {
+        position: relative;
+        background: #fafafa;
+    }
+
+    aside#menu ul {
+        position: absolute;
+        width: 100%;
+        background-color: inherit;
+        top: 100%;
+        left: 0;
+        overflow-y: hidden;
+        height: 0;
+        transition: .8s;
+    }
+
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .show-menu {
+        height: auto !important;
+    }
+
+    .hide-menu {
+        height: 0;
     }
 
     main #dashboard > .course-info {
@@ -115,5 +157,11 @@
 
     main #dashboard > .upcoming > *:not(:last-child) {
         margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    aside#profile-info {
+        width: 100%;
     }
 }
