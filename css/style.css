@@ -1,0 +1,579 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100px 0.7fr 0.3fr;
+    position: relative;
+}
+
+aside {
+    background-color: #fafafa;
+}
+
+aside#menu {
+    background: linear-gradient(to right, #fcfcfc, #eeeeee);
+    perspective: 1000px;
+}
+
+/* For logo */
+aside#menu #logo {
+    display: inline-block;
+    margin: 20px auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    color: #f86c0f;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 35px;
+    box-shadow: 5px 5px 5px #ffffff inset,
+    5px 5px 15px #eeecec inset,
+    -5px -5px 5px #eeeded inset,
+    2px 2px 12px #d3d1d1;
+    animation: flip-logo .5s;
+    transition: .8s;
+    transform-origin: 20% 80%;
+}
+
+aside#menu #logo:hover {
+    transform: rotate(-20deg) translate(20px);
+}
+
+@keyframes flip-logo {
+    0% {
+        transform: rotateX(30deg);
+    }
+
+    50% {
+        transform: rotateX(-30deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+/* For menu items */
+aside#menu ul {
+    list-style: none;
+    display: grid;
+    place-items: center;
+    margin-top: 100px;
+    transition: .8s;
+}
+
+aside#menu ul li {
+    height: 80px;
+    padding: 25px 0px;
+    transition: .8s;
+}
+
+aside#menu ul li a {
+    color: #808080;
+    text-decoration: none;
+    transition: .8s;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+aside#menu ul li a svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* For the active menu item */
+aside#menu ul li.active a {
+    transition: .8s;
+}
+
+aside#menu ul li.active a /*, aside#menu ul li:hover a*/ {
+    color: #550ff8;
+    box-shadow: 2px 2px 5px #dddddd inset,
+    5px 5px 15px #eeeeee inset,
+    -5px -5px 5px #ffffff inset;
+}
+
+/* For main - Dashboard */
+
+main #dashboard {
+    padding: 60px 5% 50px;
+}
+
+main #dashboard > h1 {
+    color: #232352;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+main #dashboard > .highlights {
+    display: flex;
+    height: 200px;
+    padding: 10px 0px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+main #dashboard > .highlights > .card {
+    border-radius: 10px;
+    margin-right: 35px;
+    padding: 20px;
+    white-space: normal;
+}
+
+main #dashboard > .highlights > .card.exam {
+    background-color: #550ff8;
+    color: #fff;
+    flex: 0 1 350px;
+    width: 350px;
+}
+
+main #dashboard > .highlights > .card.exam .deadline {
+    font-size: 12px;
+    font-weight: 200;
+}
+
+main #dashboard > .highlights > .card.exam .deadline span {
+    font-weight: 500;
+}
+
+main #dashboard > .highlights > .card.exam h1 {
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+main #dashboard > .highlights > .card.exam .topic {
+    font-size: 14px;
+    color: #ddd;
+}
+
+main #dashboard > .highlights > .card.exam .user-count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+main #dashboard > .highlights > .card.exam .users {
+    position: relative;
+    display: flex;
+    height: 40px;
+}
+
+main #dashboard > .highlights > .card.exam .users .user {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #000;
+    border: 2px solid #fff;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+}
+
+main #dashboard > .highlights > .card.exam .users .user:nth-child(1) {
+    left: 0px;
+    z-index: 4;
+}
+
+main #dashboard > .highlights > .card.exam .users .user:nth-child(2) {
+    left: 20px;
+    z-index: 3;
+}
+
+main #dashboard > .highlights > .card.exam .users .user:nth-child(3) {
+    left: 40px;
+    z-index: 2;
+}
+
+main #dashboard > .highlights > .card.exam .users .user:nth-child(4) {
+    left: 60px;
+    z-index: 1;
+    border-color: #ee7118;
+    background-color: #ee7118;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 10px;
+}
+
+main #dashboard > .highlights > .card.exam .users .user img {
+    width: 100%;
+}
+
+main #dashboard > .highlights > .card.exam a {
+    color: #fff;
+}
+
+/* For Homework and Reading Cards */
+main #dashboard > .highlights > .card:not(.exam) svg {
+    width: 25px;
+    height: 25px;
+}
+
+main #dashboard > .highlights > .card:not(.exam) h4 {
+    margin: 15px 0px;
+}
+
+main #dashboard > .highlights > .card:not(.exam) p {
+    margin: 10px 0px;
+}
+
+/* Homework Card */
+main #dashboard > .highlights > .card.homework {
+    background-color: #e9d0be;
+    color: #ee7118;
+    flex: 0 1 150px;
+    width: 150px;
+}
+
+main #dashboard > .highlights > .card.reading {
+    background-color: #e6e3ee;
+    color: #4e14ee;
+    flex: 0 1 150px;
+    width: 150px;
+}
+
+main #dashboard > .course-info {
+    display: flex;
+    height: 300px;
+    margin: 50px 0px;
+}
+
+main #dashboard > .course-info > * {
+    border-radius: 10px;
+    flex: 1;
+    padding: 20px;
+}
+
+main #dashboard > .course-info .group-info-card {
+    box-shadow: 5px 5px 18px #eee, 
+                -5px -5px 18px #eee;
+    background-color: #fff;
+}
+
+main #dashboard > .course-info .group-info-card .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main #dashboard > .course-info .group-info-card .tag {
+    color: #bbb;
+    padding-top: 2px;
+}
+
+main #dashboard > .course-info .group-info-card .heading span {
+    font-weight: 700;
+    color: #232352;
+}
+
+main #dashboard > .course-info .group-info-card .heading button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #232352;
+}
+
+main #dashboard > .course-info .group-info-card svg {
+    width: 25px;
+    height: 25px;
+}
+
+main #dashboard > .course-info .group-info-card .notify-card {
+    display: flex;
+    background-color: #eb9532;
+    margin: 20px 10px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+main #dashboard > .course-info .group-info-card .notify-card .details {
+    padding: 10px 20px;
+    flex: 1;
+}
+
+main #dashboard > .course-info .group-info-card .notify-card .details h4 {
+    font-weight: 500;
+    padding: 10px 0px;
+}
+
+main #dashboard > .course-info .group-info-card .notify-card .details p {
+    font-size: 15px;
+}
+
+main #dashboard > .course-info .group-info-card .notify-card button {
+    width: 20%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #fff;
+}
+
+main #dashboard > .course-info .course-progress-card {
+    padding: 40px;
+}
+
+main #dashboard > .course-info .course-progress-card .flag-container {
+    width: 50px;
+    height: 40px;
+    box-shadow: 4px 4px 18px #eee;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+main #dashboard > .course-info .course-progress-card .flag-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+main #dashboard > .course-info .course-progress-card h1 {
+    font-weight: 500;
+    line-height: 1.3;
+    padding: 10px 0px;
+    color: #232352;
+}
+
+main #dashboard > .course-info .course-progress-card .progress {
+    margin: 30px 0px;
+}
+
+main #dashboard > .course-info .course-progress-card .bar {
+    width: 70%;
+    height: 10px;
+    border-radius: 50px;
+    background-color: #ddd;
+    position: relative;
+}
+
+main #dashboard > .course-info .course-progress-card .indicator {
+    width: 75%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: #eb9532;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Upcoming card styles */
+main #dashboard > .upcoming {
+    display: flex;
+    height: 120px;
+}
+
+main #dashboard > .upcoming > * {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .8s;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    color: #232352;
+}
+
+main #dashboard > .upcoming > * .icon {
+    width: 50px;
+    height: 50px;
+    box-shadow: 3px 3px 18px #ded8ec;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin-right: 20px;
+    color: #4e14ee;
+}
+
+main #dashboard > .upcoming > *:nth-child(2) .icon {
+    width: 50px;
+    height: 50px;
+    box-shadow: 3px 3px 18px #ecdbd8;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin-right: 20px;
+    color: tomato;
+}
+
+main #dashboard > .upcoming > * svg {
+    width: 22px;
+    height: 22px;
+}
+
+main #dashboard > .upcoming > * .details {
+    flex: 1;
+}
+
+main #dashboard > .upcoming > *:hover {
+    transform: scale(1.1);
+}
+
+main #dashboard > .upcoming > *:not(:last-child) {
+    margin-right: 40px;
+}
+
+/* Profile info section */
+aside#profile-info {
+    padding: 20px 10%;
+}
+
+aside#profile-info > :is(h1, p) {
+    text-align: center;
+}
+
+aside#profile-info figure {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    margin: 70px auto 20px;
+}
+
+aside#profile-info figure .profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+aside#profile-info figure .profile-img img {
+    width: 100%;
+}
+
+aside#profile-info figure span {
+    display: inline-block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #eb9532;
+    color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: 500;
+    border: 6px solid #fafafa;
+    box-sizing: content-box;
+    right: 10px;
+    bottom: -6px;
+}
+
+aside#profile-info > h1 {
+    font-weight: 500;
+    font-size: 30px;
+    color: #232352;
+}
+
+aside#profile-info > p {
+    font-weight: 300;
+    color: #aaa;
+    padding: 15px;
+}
+
+aside#profile-info > .promo-card {
+   width: 100%;
+   height: 120px;
+   border-radius: 10px;
+   border: 1px solid #ddd;
+   padding: 20px 35px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 40px 0px;
+}
+
+aside#profile-info > .promo-card h3 {
+    color: #232352;
+}
+
+aside#profile-info > .promo-card p {
+    color: #aaa;
+}
+
+aside#profile-info > .promo-card .icon {
+   width: 40px;
+   height: 40px;
+   border-radius: 5px;
+   box-shadow: 2px 2px 5px #ddd;
+   display: grid;
+   place-items: center;
+   color: #232352;
+}
+
+aside#profile-info > .promo-card svg {
+   width: 22px;
+}
+
+/* Course progress Cards */
+aside#profile-info > .course-progress-card {
+   width: 100%;
+   height: 120px;
+   border-radius: 10px;
+   border: 1px solid #ddd;
+   padding: 20px 35px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 30px 0px;
+}
+
+aside#profile-info > .course-progress-card h4 {
+    color: #232352;
+}
+
+aside#profile-info > .course-progress-card p {
+    color: #aaa;
+}
+
+aside#profile-info > .course-progress-card .icon {
+   width: 70px;
+   height: 70px;
+   border-radius: 5px;
+   display: grid;
+   place-items: center;
+   color: #fff;
+}
+
+aside#profile-info > .course-progress-card svg {
+   width: 22px;
+}
+
+.purple-bg {
+    background-color: #4e14ee;
+    color: #fff;
+}
+
+.purple-text {
+    color: #4e14ee;
+}
+
+.orange-bg {
+    background-color: #eb9532;
+    color: #fff;
+}
+
+.orange-text {
+    color: #eb9532;
+}
+
+.tomato-bg {
+    background-color: tomato;
+    color: #fff;
+}
+
+.tomato-text {
+    color: tomato;
+}

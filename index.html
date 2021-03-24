@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panch Web App | Welcome to the app</title>
+    <!-- Importing google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Custom Styles below -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+</head>
+<body>
+    <!-- Menu -->
+    <aside id="menu">
+        <!-- Logo -->
+        <a href="./index.html" id="logo">
+            P.
+        </a>
+        <!-- Menu Items -->
+        <ul>
+            <!-- (1) -->
+            <li>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                      </svg>
+                </a>
+            </li>
+            <!-- (2) -->
+            <li class="active">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                      </svg>
+                </a>
+            </li>
+            <!-- (3) -->
+            <li>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                </a>
+            </li>
+            <!-- (4) -->
+            <li>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                      </svg>
+                </a>
+            </li>
+        </ul>
+
+        <!-- Mobile menu btn -->
+        <button id="menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+              </svg>
+        </button>
+    </aside>
+    <!-- Main Section -->
+    <main>
+        <div id="dashboard">
+            <h1>Progress Dashboard</h1>
+            <!-- Highlights -->
+            <div class="highlights">
+                <div class="card exam">
+                    <p class="deadline">
+                        DEADLINE <span>12:00</span>
+                    </p>
+                    <h1>Exam - Unit 5</h1>
+                    <p class="topic">
+                        Spanish for beginners
+                    </p>
+                    <div class="user-count">
+                        <div class="users">
+                            <div class="user">
+                                <img src="./images/picsart-icon.jpg" alt="">
+                            </div>
+                            <div class="user">
+                                <img src="./images/gabriel-silverio-bUwjJ-KZ280-unsplash.jpg" alt="">
+                            </div>
+                            <div class="user">
+                                <img src="./images/joshua-rawson-harris-6PROVhY2Yq4-unsplash.jpg" alt="">
+                            </div>
+                            <div class="user">+8</div>
+                        </div>
+                        <a href="#">Start testing</a>
+                    </div>
+                </div>
+                <!-- Homework Card -->
+                <div class="card homework">
+                    <div class="check">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h4>Homework</h4>
+                    <p>For today's lesson</p>
+                </div>
+                <!-- Reading Card -->
+                <div class="card reading">
+                    <div class="check">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h4>Reading</h4>
+                    <p>25 words per week</p>
+                </div>
+            </div>
+            <!-- Course info -->
+            <div class="course-info">
+                <div class="group-info-card">
+                    <div class="heading">
+                        <span>Group Info</span>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                              </svg>
+                        </button>
+                    </div>
+                    <p class="tag">13 students in the group</p>
+                    <div class="notify-card">
+                        <div class="details">
+                            <h4>Group Homework</h4>
+                            <p>5 students in your group <br>online now</p>
+                        </div>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                              </svg>
+                        </button>
+                    </div>
+                    <div class="heading">
+                        <span>Group Info</span>
+                        <span>12:00</span>
+                    </div>
+                    <p class="tag">Unit 6 - Articles</p>
+                </div>
+                <div class="course-progress-card">
+                    <div class="flag-container">
+                        <img src="./images/555635.png">
+                    </div>
+                    <h1>Spanish for beginners</h1>
+
+                    <div class="progress">
+                        <span>75%</span>
+                        <div class="bar">
+                            <div class="indicator"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Upcoming topics -->
+            <div class="upcoming">
+                <div class="grammar-card">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                          </svg>
+                    </div>
+                    <div class="details">
+                        <h4>Grammar</h4>
+                        <p>+30 grammar rules</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </div>
+                <div class="dictionary-card">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                    </div>
+                    <div class="details">
+                        <h4>Dictionary</h4>
+                        <p>+10 new words</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Profile info section -->
+    <aside id="profile-info" class="closed">
+        <!-- Close Button icon for mobile view -->
+        <button id="close-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+        </button>
+        <!-- Content Below -->
+        <figure>
+            <div class="profile-img">
+                <img src="./images/me.jpg" alt="My Profile image">
+            </div>
+            <span>5</span>
+        </figure>
+        <h1>Harrison Philips</h1>
+        <p>Business Analyst</p>
+
+        <div class="promo-card">
+            <div class="details">
+                <h3>Get -10% sell price</h3>
+                <p>For << Spanish A2 >> course</p>
+            </div>
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+            </div>
+        </div>
+
+        <h1>Course Progress</h1>
+        <div class="course-progress-card">
+            <span class="purple-text">63%</span>
+            <div class="icon purple-bg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                  </svg>
+            </div>
+            <div class="details">
+                <h4>Grammar</h4>
+                <p>Learn new rules</p>
+            </div>
+        </div>
+        <div class="course-progress-card">
+            <span class="orange-text">78%</span>
+            <div class="icon orange-bg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+            </div>
+            <div class="details">
+                <h4>Dictionary</h4>
+                <p>Learn 5 new words</p>
+            </div>
+        </div>
+        <div class="course-progress-card">
+            <span class="tomato-text">34%</span>
+            <div class="icon tomato-bg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+            </div>
+            <div class="details">
+                <h4>Reading</h4>
+                <p>Train your skill.</p>
+            </div>
+        </div>
+    </aside>
+    <!-- Script below -->
+    <script src="./js/app.js"></script>
+</body>
+</html>
