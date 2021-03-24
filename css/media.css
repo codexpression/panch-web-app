@@ -89,9 +89,9 @@
     #profile-info #close-btn {
         width: 30px;
         height: 30px;
-        position: absolute;
+        position: sticky;
         top: 20px;
-        right: 20px;
+        left: 90%;
         border-radius: 50%;
         background-color: #ccc;
         border: none;
