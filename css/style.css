@@ -550,6 +550,7 @@ aside#profile-info > .course-progress-card .icon {
    display: grid;
    place-items: center;
    color: #fff;
+   margin: 5px 10px;
 }
 
 aside#profile-info > .course-progress-card svg {
